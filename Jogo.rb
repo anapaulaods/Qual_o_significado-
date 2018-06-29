@@ -37,10 +37,14 @@ class GameWindow < Gosu::Window
 		if butao ==(Gosu::KbI) && @estado == "inicio" then 
       		@estado = "computador"
       	end   	
+<<<<<<< HEAD
 
       	#se @z == -1 a resposta correta está em cima 
       	#se @z == 0  a resposta correta está em baixo
       	
+=======
+      			#---------- Comando para avançar pra próxima pergunta.
+>>>>>>> 3de78f8b39e79f7462b1e8f3b8bf446f8a8030b2
       	if butao == (Gosu::KbReturn) && @estado == "computador" && @z == -1 then
       		@estado = "livro"
       	end
@@ -87,8 +91,43 @@ class GameWindow < Gosu::Window
       		initialize
       	end 
 
+<<<<<<< HEAD
 
       	#------------ Função para troca de opões de uma mesma tela.
+=======
+      	if butao == (Gosu::KbReturn) && @estado == "livro" && @z == -1 then
+      		@estado = "carta"
+      	end
+
+      	if butao == (Gosu::KbReturn) && @estado == "carta" && @z == -1 then
+      		@estado = "cinema"
+      	end
+
+      	if butao == (Gosu::KbReturn) && @estado == "cinema" && @z == -1 then
+      		@estado = "jornal"
+      	end
+
+      	if butao == (Gosu::KbReturn) && @estado == "jornal" && @z == -1 then
+      		@estado = "radio"
+      	end
+
+      	if butao == (Gosu::KbReturn) && @estado == "radio" && @z == -1 then
+      		@estado = "marionete"
+      	end
+
+      	if butao == (Gosu::KbReturn) && @estado == "marionete" && @z == -1 then
+      		@estado = "telefone"
+      	end
+
+      	if butao == (Gosu::KbReturn) && @estado == "telefone" && @z == -1 then
+      		@estado = "televisao"
+      	end
+
+
+
+
+      			#------------ Função para troca de opões de uma mesma tela.
+>>>>>>> 3de78f8b39e79f7462b1e8f3b8bf446f8a8030b2
       	if butao == (Gosu::KbUp) && @estado == "computador" then
       		@z = -1	
       	end
@@ -111,6 +150,7 @@ class GameWindow < Gosu::Window
       	if butao == (Gosu::KbDown) && @estado == "carta" then
       		@z = 0
       	end
+<<<<<<< HEAD
 
       	
       	if butao ==(Gosu::KbUp) && @estado == "marionete" then
@@ -125,6 +165,10 @@ class GameWindow < Gosu::Window
       		@z = -1	
       	end   			 
       	if butao == (Gosu::KbDown) && @estado == "jornal" then
+=======
+      			 
+      	if butao == (Gosu::KbDown) && @estado == "computador" then
+>>>>>>> 3de78f8b39e79f7462b1e8f3b8bf446f8a8030b2
       		@z = 0
 		end
 
@@ -146,8 +190,84 @@ class GameWindow < Gosu::Window
       		@z = 0
       		
       	end
+<<<<<<< HEAD
       	if butao ==(Gosu::KbDown) && @estado == "televisao" then
       		@z = -1
+=======
+
+      	if butao == (Gosu::KbUp) && @estado == "livro" then 
+      		@z = -1
+
+      	end
+
+      	if butao == (Gosu::KbUp) && @estado == "carta" then
+      		@z = -1
+      		
+      	end
+      			 
+      	if butao == (Gosu::KbDown) && @estado == "carta" then
+      		@z = 0
+      		
+      	end
+
+      	if butao == (Gosu::KbUp) && @estado == "cinema" then
+      		@z = -1
+      		
+      	end
+      			 
+      	if butao == (Gosu::KbDown) && @estado == "cinema" then
+      		@z = 0
+      		
+      	end
+
+      	if butao == (Gosu::KbUp) && @estado == "jornal" then
+      		@z = -1
+      		
+      	end
+      			 
+      	if butao == (Gosu::KbDown) && @estado == "jornal" then
+      		@z = 0
+      		
+      	end
+
+      	if butao == (Gosu::KbUp) && @estado == "radio" then
+      		@z = -1
+      		
+      	end
+      			 
+      	if butao == (Gosu::KbDown) && @estado == "radio" then
+      		@z = 0
+      		
+      	end
+
+      	if butao == (Gosu::KbUp) && @estado == "marionete" then
+      		@z = -1
+      		
+      	end
+      			 
+      	if butao == (Gosu::KbDown) && @estado == "marionete" then
+      		@z = 0
+      		
+      	end
+
+      	if butao == (Gosu::KbUp) && @estado == "telefone" then
+      		@z = -1
+      		
+      	end
+      			 
+      	if butao == (Gosu::KbDown) && @estado == "telefone" then
+      		@z = 0
+      		
+      	end
+
+      	if butao == (Gosu::KbUp) && @estado == "televisao" then
+      		@z = -1
+      		
+      	end
+      			 
+      	if butao == (Gosu::KbDown) && @estado == "televisao" then
+      		@z = 0
+>>>>>>> 3de78f8b39e79f7462b1e8f3b8bf446f8a8030b2
       		
       	end
       	if butao ==(Gosu::KbUp) && @estado == "telefone" then
@@ -232,7 +352,11 @@ class GameWindow < Gosu::Window
 	end
 	def draw_computador
 		@computador_certo.draw(0, 0, 0)
+<<<<<<< HEAD
 		@computador_errado.draw(0, 0, @z) #@z será a tela de "baixo"
+=======
+		@computador_errado.draw(0, 0, @z) #@z será a tela de "baixo" 
+>>>>>>> 3de78f8b39e79f7462b1e8f3b8bf446f8a8030b2
 	end
 
 	def update_livro
@@ -240,6 +364,7 @@ class GameWindow < Gosu::Window
 	end
 	def draw_livro
 		@livro_errado.draw(0, 0, 0)
+<<<<<<< HEAD
 		@livro_certo.draw(0, 0, @z) #@z será a tela de "baixo"
 	end
 
@@ -284,6 +409,9 @@ class GameWindow < Gosu::Window
 		@cinema_certo.draw(0, 0, 0)
 		@cinema_errado.draw(0, 0, @z) #@z será a tela de "baixo"
 
+=======
+		@livro_certo.draw(0, 0, @z) #@z será a tela de "baixo" 
+>>>>>>> 3de78f8b39e79f7462b1e8f3b8bf446f8a8030b2
 	end
 
 	def update_televisao
